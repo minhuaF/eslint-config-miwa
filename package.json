@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/minhuaF/eslint-config-miwa/issues"
   },
-  "homepage": "https://github.com/minhuaF/eslint-config-miwa#readme"
+  "homepage": "https://github.com/minhuaF/eslint-config-miwa#readme",
+  "keywords": [
+    "eslint"
+  ]
 }
