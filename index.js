@@ -28,49 +28,57 @@ module.exports = {
   rules: {
     // ------------------------ 与Javascript代码中的错误或逻辑错误有关 ----------------
     // 禁止在条件语句中出现赋值语句，除非用圆括号括起来
-    'no-cond-assign': 'except-parens', 
+    'no-cond-assign': '2', 
     // 允许使用console
-    'no-console': '',
+    //'no-console': '',
     // 禁止在条件语句中出现常量表达式
     'no-constant-condition': {
       'checkLoops': true
     },
+    // 禁止在 function 定义中出现重复的参数
+    'no-dupe-args': '2',
     // 禁止在对象字面量中出现重复的键
-    'no-dupe-keys': 'error',
+    'no-dupe-keys': '2',
     // 禁止重复case标签
-    'no-duplicate-case': 'error',
+    'no-duplicate-case': '2',
+    // 禁止空块语句
+    'no-empty': '2',
+    // 禁止对 function 声明重新赋值
+    'no-func-assign': '2',
+    // 禁止在 return、throw、continue 和 break 语句后出现不可达代码
+    'no-unreachable': '2',
+    // 强制要求使用 isNaN() 检查 NaN
+    //'use-isnan': 'error',
+    // 禁止否定关系运算符的左操作数
+    // 'no-unsafe-negation': 'error',
+    // 禁止在finally语句中出现控制流操作
+    //'no-unsafe-finally': 'error',
+    // 检测字面量语法 es6
+    //'no-template-curly-in-string': 'error',
+    // 禁用稀疏数组
+    //'no-sparse-arrays': 'error',
+    // 禁止正则表达式字面量中出现多个空格
+    'no-regex-spaces': '2',
+    // 禁止将Math，JSON，Reflect对象当做函数进行调用
+    'no-obj-calls': '2',
+    // 禁止在 RegExp 构造函数中出现无效的正则表达式
+    //'no-invalid-regexp': 'error',
+    // 禁止在嵌套的语句块中出现变量或 function 声明
+    'no-inner-declarations': ['error', 'both'],
+    // 禁止对 function 声明重新赋值
+    'no-func-assign': '2',
+    // 禁用不必要的分号
+    'no-extra-semi': '2',
+    // 禁止冗余的括号
+    'no-extra-parens': '2',
+    // 禁止不必要的布尔类型转换
+    //'no-extra-boolean-cast': 'error',
+    // 禁止空块语句
+    'no-empty': '2',
     // 强制typeof表达式与有效字符串进行比较
     'valid-typeof': {
       'requireStringLiterals': true
     },
-    // 强制要求使用 isNaN() 检查 NaN
-    'use-isnan': 'error',
-    // 禁止否定关系运算符的左操作数
-    'no-unsafe-negation': 'error',
-    // 禁止在finally语句中出现控制流操作
-    'no-unsafe-finally': 'error',
-    // 检测字面量语法 es6
-    'no-template-curly-in-string': 'error',
-    // 禁用稀疏数组
-    'no-sparse-arrays': 'error',
-    // 禁止正则表达式字面量中出现多个空格
-    'no-regex-spaces': 'error',
-    // 禁止将Math，JSON，Reflect对象当做函数进行调用
-    'no-obj-calls': 'error',
-    // 禁止在 RegExp 构造函数中出现无效的正则表达式
-    'no-invalid-regexp': 'error',
-    // 禁止在嵌套的语句块中出现变量或 function 声明
-    'no-inner-declarations': ['error', 'both'],
-    // 禁止对 function 声明重新赋值
-    'no-func-assign': 'error',
-    // 禁用不必要的分号
-    'no-extra-semi': 'error',
-    // 禁止冗余的括号
-    'no-extra-parens': 'error',
-    // 禁止不必要的布尔类型转换
-    'no-extra-boolean-cast': 'error',
-    // 禁止空块语句
-    'no-empty': 'error',
 
     // ---------------------- 最佳实践，建议风格 ----------------
     // 缩进必须为2个空格
