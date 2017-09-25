@@ -98,37 +98,51 @@ module.exports = {
     // 要求Switch语句中有Default分支， 若没有，则加上 //no default
     'default-case': 2,
     // 关闭在点号前后换行
-    'dot-location': 0,
+    //'dot-location': 0,
     // 使用点号来访问属性
-    'dot-notation': [ 2, {
-      'allowPattern': '^[a-z]+(_[a-z]+)+$'
-    }],
+    // 'dot-notation': [ 2, {
+    //   'allowPattern': '^[a-z]+(_[a-z]+)+$'
+    // }],
     // 要求使用 === 和！==
-    'eqeqeq': [ 2, 'always'],
-    'guard-for-in': 2,
+    //'eqeqeq': [ 2, 'always'],
+    //'guard-for-in': 2,
     'no-alert': 0,
     // 禁用已启用的代码和次优代码
     'no-caller': 2,
-    'no-case-declarations': 2,
+    // 不允许在 case 子句中使用词法声明
+    //'no-case-declarations': 2,
     'no-div-regex': 2,
+    // 禁止 if 语句中 return 语句之后有 else 块
     'no-else-return': 1,
+    // 禁止出现空函数
     'no-empty-function': 2,
-    // TODO
+    // 禁止使用空解构模式
     'no-empty-pattern': 2,
-    'no-eq-null': 2,
-    // TODO
+    // 在没有类型检查操作符的情况下与 null 进行比较
+    'no-eq-null': 1,
+    // 禁用 eval()
     'no-eval': [ 2, {
       'allowIndirect': true
     }],
-    'no-extend-native': 2,
+    //'no-extend-native': 2,
+    // 禁止不必要的 .bind() 调用
     'no-extra-bind': 2,
+    // 禁用不必要的标签
     'no-extra-label': 2,
+    // 禁止 case 语句落空
     'no-fallthrough': [ 2, {
       'commentPattern': 'break[\\s\\w]*omitted"'
     }],
+    // 禁止数字字面量中使用前导和末尾小数点
     'no-floating-decimal': 0,
-    
-
+    // 禁用不必要的嵌套块
+    'no-lone-blocks': 2,
+    // 禁止循环中存在函数
+    'no-loop-func': 2,
+    // 
+    'no-magic-numbers':[2, {
+      "ignoreArrayIndexes": true
+    }]
 
   }
 }
