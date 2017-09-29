@@ -139,10 +139,42 @@ module.exports = {
     'no-lone-blocks': 2,
     // 禁止循环中存在函数
     'no-loop-func': 2,
-    // 
+    // 禁用魔术数字
     'no-magic-numbers':[2, {
       "ignoreArrayIndexes": true
-    }]
-
+    }],
+    // 禁止使用多个空格
+    'no-multi-spaces':[2,{
+      "ignoreEOLComments": true
+    }],
+    // 禁止多次声明同一变量
+    'no-redeclare': [2, { 
+      "builtinGlobals": true 
+    }],
+    // 禁止自身赋值
+    'no-self-assign': [2, {
+      props: true
+    }],
+    // 禁用未使用过的标签
+    'no-unused-labels': 2,
+    // 不允许在 catch 语句中遮盖变量
+    'no-catch-shadow': 2,
+    // 禁用与变量同名的标签
+    'no-label-var': 2,
+    // 禁止变量声明覆盖外层作用域的变量
+    'no-shadow': 2,
+    // 禁止将标识符定义为受限的名字
+    'no-shadow-restricted-names': 2,
+    // 不允许使用undefined变量
+    'no-undefined': 2,
+    // 禁止在变量定义之前使用它们 函数、类、变量
+    'no-use-before-define':[2, {
+      'functions': true, 
+      'classes': true,
+      'variables': true
+    }],
+    // 禁止调用 require 时使用 new 操作符
+    'no-new-require': 2,
+    // 
   }
 }
