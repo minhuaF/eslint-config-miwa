@@ -82,14 +82,17 @@ module.exports = {
 
     // ---------------------- 最佳实践，建议风格 ----------------
     // 缩进必须为2个空格
-    'indent': [ 1, 2 ],
+    'indent': [ 1, 2, {
+      'SwitchCase': 1
+    }],
     // 强制数组方法的回调函数中使用return语句
     'array-callback-return': 2,
     // 检测变量在定义范围以外使用
     'block-scoped-var': 2,
     // 限制圈复杂度，目前限制为3 (3个if)
     'complexity': [ 2, {
-      'max': 3
+      'max': 3,
+      'MemberExpression': 1
     }],
     // TODO 控制return时是否指定值
     // 'consistent-return' : 2,
@@ -141,15 +144,15 @@ module.exports = {
     'no-loop-func': 2,
     // 禁用魔术数字
     'no-magic-numbers':[2, {
-      "ignoreArrayIndexes": true
+      'ignoreArrayIndexes': true
     }],
     // 禁止使用多个空格
     'no-multi-spaces':[2,{
-      "ignoreEOLComments": true
+      'ignoreEOLComments': true
     }],
     // 禁止多次声明同一变量
     'no-redeclare': [2, { 
-      "builtinGlobals": true 
+      'builtinGlobals': true 
     }],
     // 禁止自身赋值
     'no-self-assign': [2, {
@@ -173,8 +176,32 @@ module.exports = {
       'classes': true,
       'variables': true
     }],
+    // ----------------------Node.js and CommonJS ----------------
     // 禁止调用 require 时使用 new 操作符
     'no-new-require': 2,
-    // 
+    // ---------------------- 编码风格 ----------------
+    'arrary-bracket-newline':[2, 'always', {
+      'singleValue': false,
+      'objectsInArrays': false,
+      'arrarysInArrays': false
+    }],
+    'block-spacing': [2, 'never'],
+    // 强制 if-else中的else语句，连同catch 和 finally，都必须在右括号后另起一行
+    'brace-style': [2, 'stroustrup'],
+    // 要求使用骆驼拼写法
+    'camelcase': 2,
+    //TODO 强制在对象和数组字面量中使用一致的拖尾逗号，不兼容IE8
+    'comma-dangle': [2, 'always'],
+    // 强制在逗号前不使用逗号，在逗号后要使用逗号
+    'camma-spacing': [2, {
+      'before': false,
+      'after': true
+    }],
+    // 逗号位置 (默认)
+    'comma-style': [2, 'last'],
+    // function 定义括号前不需要空格
+    'func-call-spacing': [2, 'always'],
+    // 强制块语句的最大可嵌套深度 4
+    'max-depth': [2, 4]
   }
 }
