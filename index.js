@@ -1,3 +1,7 @@
+/**
+ * TODO 规则间可能会有冲突
+ */
+
 module.exports = {
   // 设置解析器选项
   parser: 'babel-eslint',    // 默认值esprima，使用babel-eslint能支持jsx
@@ -180,6 +184,9 @@ module.exports = {
     // 禁止调用 require 时使用 new 操作符
     'no-new-require': 2,
     // ---------------------- 编码风格 ----------------
+    /**
+     * 主观因素比较多，有不合理的及时修改
+     */
     'arrary-bracket-newline':[2, 'always', {
       'singleValue': false,
       'objectsInArrays': false,
@@ -202,6 +209,37 @@ module.exports = {
     // function 定义括号前不需要空格
     'func-call-spacing': [2, 'always'],
     // 强制块语句的最大可嵌套深度 4
-    'max-depth': [2, 4]
+    'max-depth': [2, 4],
+    // 强制行的最大长度（按照惯例80个字符）
+    'max-len': [2, 80],
+    // 设置文件的最大行数威500行，忽略空白行，忽略注释行
+    'max-lines':[2, {
+      'max': 500,
+      'skipBlankLines': true,
+      'skipComments': true
+    }],
+    // 设置回调嵌套深度5
+    'max-nested-callbacks': [2, 5],
+    // 设置函数定义的参数最大个数为5，超过了会警告
+    'max-params': [1, 5],
+    // 设置一个函数中最大行数，设置为30，超过了会警告，建议抽离
+    'max-statements': [1, 30],
+    // 设置每一行所允许的最大语句数量，与上面的设置数字数量有不同
+    'max-statements-per-line': [1, {
+      'max':2
+    }],
+    // 调用函数时 制定函数名大小写
+    'new-cap': [2, {
+      'newIsCap': true,
+      'capIsNew': true
+    }],
+    // TODO 禁止使用Array构造函数
+    'no-array-constructor': [ 0 ],
+    // 禁止使用按位操作符
+    'no-bitwise': [2],
+    // 使用 continue 时给警告
+    'no-continue': [1]
+    
+
   }
 }
