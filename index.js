@@ -238,8 +238,67 @@ module.exports = {
     // 禁止使用按位操作符
     'no-bitwise': [2],
     // 使用 continue 时给警告
-    'no-continue': [1]
-    
+    'no-continue': [1],
+    // 禁止使用内联注释
+    'no-inline-comments': 2,
+    // 警告 if 语句作为唯一语句出现在else语句块中
+    'no-lonely-if': 1,
+    // TODO 禁止使用不同的操作符, 没有看懂
+    'no-mixed-operators': 0,
+    // 禁止使用空格和tab混合缩进
+    'no-mixed-spaces-and-tabs': [2, 'smart-tabs'],
+    // 禁止使用连锁赋值
+    'no-multi-assign': 2,
+    // 不允许多个空行
+    'no-mulitiple-empty-lins': [2, {
+      'max': 2
+    }],
+    // 禁用否定表达式
+    'no-negated-conditon': 2,
+    // 禁止使用 object 构造函数
+    'no-new-object': 2,
+    // 不建议使用一元操作符，在for中可以使用
+    'no-plusplus': [1, {
+      'allowForLoopAfterthoughts': true
+    }],
+    // 可以使用三元操作符
+    'no-ternary': 0,
+    // 空白行中的空格
+    'no-trailing-spaces': [1, {
+      'skipBlankLines': false,
+      'ignoreComments': true
+    }],
+    // TODO 禁止标识符中有悬空下划线
+    'no-underscore-dangle': 0,
+    // 要求使用简洁的三元操作符
+    'no-unneeded-ternary': [2, {
+      'defaultAssignment': true
+    }],
+    // 禁止属性前有空白
+    'no-whitespace-before-property': 2,
 
+
+
+
+    // ---------------------- ES6+ 编码风格 ----------------
+    // 要求箭头函数体使用大括号
+    'arrow-body-style': [2, 'always'],
+    // 强制箭头函数的箭头前后使用一致的空格
+    'arrow-spacing': [2, {
+      'before': true,
+      'after': true
+    }],
+    // 要求在构造函数中有 super() 的调用
+    'constructor-super': 2,
+    // 不允许修改类声明的变量
+    'no-class-assign': 2,
+    // 不允许改变用const声明的变量
+    'no-const-assign': 2,
+    // 不允许类成员中有重复的名称
+    'no-dupe-class-members': 2,
+    // 在构造函数中禁止在调用super()之前使用this或super
+    'no-this-before-super': 2,
+    // 建议使用模板而非字符串连接
+    'prefer-template': 1
   }
 }
