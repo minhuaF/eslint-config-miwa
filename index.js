@@ -34,7 +34,7 @@ module.exports = {
     // 禁止在条件语句中出现赋值语句，除非用圆括号括起来
     'no-cond-assign': 2,
     // 允许使用console
-    //'no-console': '',
+    'no-console': 0,
     // 禁止在条件语句中出现常量表达式
     'no-constant-condition': [2, {
       'checkLoops': true
@@ -85,8 +85,8 @@ module.exports = {
     'indent': [ 1, 2, {
       'SwitchCase': 1
     }],
-    // 强制数组方法的回调函数中使用return语句
-    'array-callback-return': 2,
+    // TODO 允许数组方法的回调函数中没有return语句
+    'array-callback-return': 0,
     // 检测变量在定义范围以外使用
     'block-scoped-var': 2,
     // 限制圈复杂度，目前限制为3 (3个if)
@@ -193,7 +193,7 @@ module.exports = {
     // 逗号位置 (默认)
     'comma-style': [2, 'last'],
     // function 定义括号前不需要空格
-    'func-call-spacing': [2, 'always'],
+    'func-call-spacing': [2, 'never'],
     // 强制块语句的最大可嵌套深度 4
     'max-depth': [2, 4],
     // 强制行的最大长度（按照惯例80个字符）
