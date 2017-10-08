@@ -1,3 +1,1 @@
-module.exports = {
-  extends: 'miwa',
-}
+module.exports = require('./index')
