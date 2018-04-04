@@ -2,22 +2,20 @@
 
 ## 安装
 
-` $ npm install --save-dev eslint-config-miwa babel-eslint eslint-plugin-babel`
-
-说明：由于希望支持`jsx`，故使用了`babel-eslint`。
+` $ npm install eslint-config-miwa --save-dev`
 
 ## 使用
 
 ### 配置文件
 
-在项目根目录下新建文件`.eslintrc.js`：
+在项目根目录下新建文件`.eslintrc`：
 ```javascript
-module.exports = {
-  extends: 'miwa'
+{
+  "extends": "eslint-config-miwa"
 }
 ```
 
-### 配置`package.json`
+### 配置 `package.json`
 ```json
   "scripts": {
     "lint": "eslint 需要检测的目录名",
@@ -25,5 +23,5 @@ module.exports = {
   },
 ```
 
-## 参考资料
-- [考虑参考项目结构](https://github.com/ipluser/eslint-config-es5)
+### 建议
+1. 在VSCode中使用`eslint`需安装 `ESLint` 插件
